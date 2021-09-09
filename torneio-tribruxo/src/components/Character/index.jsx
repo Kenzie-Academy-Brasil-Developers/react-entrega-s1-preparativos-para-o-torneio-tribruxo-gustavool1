@@ -6,8 +6,6 @@ const Characteres = ({students}) =>{
         return Math.floor(Math.random()*11)        
     }
     const estudantes = () =>{
-       
-        
         const retorno = []
         while(retorno.length <3){
             const n = randomNumber()
@@ -22,10 +20,7 @@ const Characteres = ({students}) =>{
     const addingRandomBruxos = () =>{
         setBruxos(estudantes)
     }
-    useEffect(()=>{
-
-    },[bruxos])
-    // <img src={students[n].image} alt={students[n].name}></img>
+   
     return(
         <section className='students-container'>
              <>
