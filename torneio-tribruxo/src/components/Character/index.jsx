@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Bruxo from './Bruxo'
 import './style.css'
 const Characteres = ({students}) =>{
@@ -34,6 +34,9 @@ const Characteres = ({students}) =>{
     const addingRandomBruxos = () =>{
         setBruxos(estudantes)
     }
+    useEffect(()=>{
+
+    },[bruxos])
     // <img src={students[n].image} alt={students[n].name}></img>
     return(
         <section className='students-container'>
