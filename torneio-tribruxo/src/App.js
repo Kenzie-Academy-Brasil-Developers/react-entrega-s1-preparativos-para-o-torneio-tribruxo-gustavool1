@@ -20,6 +20,7 @@ function App() {
       setShowingStudents(true)
     }
   }
+  console.log(students)
   return (
     <div className="App">
       <header className="App-header">

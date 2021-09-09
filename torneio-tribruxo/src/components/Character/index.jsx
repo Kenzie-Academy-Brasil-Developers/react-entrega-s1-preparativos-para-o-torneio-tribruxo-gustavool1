@@ -3,29 +3,17 @@ import Bruxo from './Bruxo'
 import './style.css'
 const Characteres = ({students}) =>{
     const randomNumber = ()=>{
-        return Math.floor(Math.random()*3)
+        return Math.floor(Math.random()*11)        
     }
     const estudantes = () =>{
        
-        const gryffindor = students.filter((estudante)=>estudante.house === 'Gryffindor')
-        const randomGryffindor = Math.floor(Math.random()*5)
         
-        const slytherin = students.filter((estudante)=>estudante.house === 'Slytherin')
-        const randomSlytherin = Math.floor(Math.random()*3)
-
-        const hufflepuff = students.filter((estudante)=>estudante.house === 'Hufflepuff')
-        const ravenclaw = students.filter((estudante)=>estudante.house === 'Ravenclaw')
-
-        const hufflepuffEravenclaw = [...hufflepuff, ...ravenclaw]
-        const randomhufflepuffEravenclaw = Math.floor(Math.random()*3)
-
-        const allStudents = [gryffindor[randomGryffindor],slytherin[randomSlytherin],hufflepuffEravenclaw[randomhufflepuffEravenclaw]]
         const retorno = []
         while(retorno.length <3){
             const n = randomNumber()
-            const filtrando = retorno.filter((element)=>element.house === allStudents[n].house)
+            const filtrando = retorno.filter((element)=>element.house === students[n].house)
             if(filtrando.length === 0){
-                retorno.push(allStudents[n])
+                retorno.push(students[n])
             }
         }
         return retorno
